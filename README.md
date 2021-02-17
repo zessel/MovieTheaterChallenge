@@ -10,9 +10,17 @@ This program simulates a movie theater ticket reservation system with social dis
 - That the theater will be busy and likely fill. 
 - That unfulfillable reservations are parsed from the standard output format elsewhere.  The system maintains the same output structure regardless of whether a booking was actually possible with no special message.
 - That a diagonal buffer exists between patrons.  Taken from the sample output where `R001 I1,I2` and `R004 J4,J5,J6` are returned.  Therefore, buffering looks like: 
-`O O X X X O O`     `O O O X O O O`
-`X X X * X X X` not `X X X * X X X`
-`O O X X X O O`     `O O O X O O O`
+```
+O O X X X O O
+X X X * X X X
+O O X X X O O
+```
+not
+```
+O O O X O O O
+X X X * X X X
+O O O X O O O
+```
 - That the input file is formatted correctly.  There is no error checking on input.
 
 ### Implementation
